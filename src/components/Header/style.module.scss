@@ -1,0 +1,43 @@
+.hr{
+	margin: 0;
+	padding: 0;
+	border: none;
+	height: 1px;
+	background-color: #D5D8DD;
+	color: #D5D8DD;
+}
+
+.header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-sizing: border-box;
+	padding: 8px 16px;
+	width: 100%;
+	height: 48px;
+
+	.nav{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 8px;
+		.profile{
+			display: flex;
+
+			.avatar{
+				margin-right: 8px;
+			}
+		}
+
+		.settings{
+			padding: 6px;
+			border: 1px solid #D5D8DD;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+
+		.settings:hover{
+			background-color: #D5D8DD;
+		}
+	}
+}
