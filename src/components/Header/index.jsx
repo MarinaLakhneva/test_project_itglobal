@@ -1,5 +1,5 @@
 import style from './style.module.scss';
-import Logo from './components/Header/logo.svg';
+import Logo from './logo.svg';
 import Avatar from './avatar.svg';
 import Settings from './settings.svg';
 import SearchBox from "../../components/SearchBox";
