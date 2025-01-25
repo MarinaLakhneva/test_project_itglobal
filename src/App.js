@@ -2,7 +2,7 @@ import './App.css';
 import Header from "../src/components/Header";
 import SideBar from "../src/components/SideBar";
 import NavBar from "../src/components/NavBar";
-import TaskInformation from "../src/components/TaskInformation";
+import CreateTask from "./components/CreateTask";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <div className="container">
         <SideBar/>
         <NavBar/>
-        <TaskInformation/>
+        <CreateTask/>
       </div>
     </div>
   );

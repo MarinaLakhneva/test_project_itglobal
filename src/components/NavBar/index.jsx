@@ -3,14 +3,14 @@ import Clean from "./clean.svg";
 import Fix from "./fix.svg";
 import Icon from "./icon.svg";
 import {mockNav} from "./mock"
-import SearchBox from "../SearchBox";
 import DesignButton from "../../../src/components/DesignButton";
+import Input from "../../../src/components/Input";
 
 const NavBar = () => {
 	return (
 		<div className={style.navbar}>
 			<div className={style.container}>
-				<SearchBox text="Поиск по меню" src={Clean}/>
+				<Input src={Clean} search={false} title="" calendar={false} add={false} necessarily="" placeholder="Поиск по меню"/>
 				<DesignButton src={Fix} alt="fix"/>
 			</div>
 			<hr/>

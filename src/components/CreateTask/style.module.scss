@@ -3,11 +3,11 @@
 	flex-direction: column;
 	width: 100%;
 	overflow: hidden;
+	padding: 16px;
 
 	.options{
 		display: flex;
 		justify-content: space-between;
-		padding: 16px;
 
 		.save{
 			color: #ffffff;
@@ -23,7 +23,7 @@
 	.task{
 		display: flex;
 		flex-direction: column;
-		padding: 16px;
+		margin-top: 16px;
 
 		.title{
 			font-weight: 600;
@@ -36,17 +36,20 @@
 		}
 
 		.information{
-			margin-top: 24px;
+			margin-top: 16px;
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
 			gap: 16px;
 		}
 
-		.information > :nth-child(-n+6) {
+		.information > :nth-child(-n+8) {
 			grid-column: span 1;
 		}
-		.information > :nth-child(n+7) {
+		.information > :nth-child(n+9) {
 			grid-column: span 2;
+		}
+		.information > :nth-child(n+11) {
+			grid-column: span 1;
 		}
 	}
 }

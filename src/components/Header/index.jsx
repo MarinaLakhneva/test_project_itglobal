@@ -3,18 +3,21 @@ import Logo from './logo.svg';
 import Avatar from './avatar.svg';
 import Settings from './settings.svg';
 import Search from './search.svg';
-
-import SearchBox from "../../components/SearchBox";
 import DesignButton from "../../../src/components/DesignButton";
+import Input from "../../../src/components/Input";
+
 const Header = () => {
 	return (
 		<header>
 			<div className={style.header}>
 				<div>
-					<img src={Logo} alt="logo"/>
+					<img src={Logo} alt="logo" style={{cursor: "pointer"}}/>
 				</div>
 				<div className={style.nav}>
-					<SearchBox text="Поиск" src={Search}/>
+					<div style={{width: "296px"}}>
+						<Input src={Search} search={false} title="" calendar={false} add={false} necessarily="" placeholder="Поиск"/>
+					</div>
+					
 					<div className={style.profile}>
 						<img className={style.avatar} src={Avatar} alt="profile"/>
 						<p>Максим Галактионов</p>

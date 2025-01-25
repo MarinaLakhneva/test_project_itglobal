@@ -1,7 +1,8 @@
 import style from './style.module.scss';
 import Input from "../Input";
 import {titles} from "./mock"
-const TaskInformation = () => {
+
+const CreateTask = () => {
 	return (
 		<div className={style.content}>
 			<div className={style.options}>
@@ -25,14 +26,17 @@ const TaskInformation = () => {
 								key={index}
 								search={value.search}
 								add={value.add}
+								calendar={value.calendar}
+								titleCalendar={value.title}
+								placeholder={value.title}
+								src={value.src}
 							/>
 						))
 					}
 				</div>
-				<p style={{color: "red", fontWeight: "600"}}>тут еще четыре инпута</p>
 			</div>
 		</div>
 	);
 };
 
-export default TaskInformation;
+export default CreateTask;
