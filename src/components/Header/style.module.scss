@@ -1,11 +1,4 @@
-.hr{
-	margin: 0;
-	padding: 0;
-	border: none;
-	height: 1px;
-	background-color: #D5D8DD;
-	color: #D5D8DD;
-}
+@import '../../index.css';
 
 .header{
 	display: flex;
@@ -23,21 +16,11 @@
 		gap: 8px;
 		.profile{
 			display: flex;
+			align-items: center;
 
 			.avatar{
 				margin-right: 8px;
 			}
-		}
-
-		.settings{
-			padding: 6px;
-			border: 1px solid #D5D8DD;
-			border-radius: 4px;
-			cursor: pointer;
-		}
-
-		.settings:hover{
-			background-color: #D5D8DD;
 		}
 	}
 }

@@ -1,0 +1,30 @@
+@import '../../index.css';
+
+.navbar{
+	width: 280px;
+	height: 100vh;
+	border: 1px solid #D5D8DD;
+	border-top: none;
+	border-bottom: none;
+
+	.nav{
+		width: 280px;
+		.item{
+			display: flex;
+			align-items: center;
+			margin: 10px 16px;
+			gap: 8px;
+		}
+
+		p:hover{
+			color: #D5D8DD;
+		};
+	}
+
+	.container{
+		display: flex;
+		padding: 16px;
+		margin: 0;
+		gap: 8px;
+	}
+}

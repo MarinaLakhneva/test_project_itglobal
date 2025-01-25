@@ -1,17 +1,15 @@
 import style from './style.module.scss';
-import Search from './search.svg';
-const SearchBox = () => {
+
+const SearchBox = ({text, src}) => {
 	return (
 		<div className={style.inputContainer}>
 			<input
 				className={style.input}
-				placeholder="Поиск"
+				placeholder={text}
 			/>
-			<img className={style.svg} src={Search} alt="search"/>
+			<img className={style.svg} src={src} alt="search"/>
 		</div>
 	);
 };
-
-
 
 export default SearchBox;

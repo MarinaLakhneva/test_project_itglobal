@@ -1,0 +1,25 @@
+.container{
+	display: flex;
+
+	.title{
+		font-weight: 600;
+		font-size: 14px;
+	}
+}
+
+.options{
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	margin-top: 8px;
+	height: 32px;
+
+	.input{
+		height: 32px;
+		padding: 6px 0 6px 8px;
+		box-sizing: border-box;
+		border: 1px solid #D5D8DD;
+		border-radius: 4px;
+	}
+}
+
