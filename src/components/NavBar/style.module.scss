@@ -6,14 +6,17 @@
 	border: 1px solid #D5D8DD;
 	border-top: none;
 	border-bottom: none;
+	margin-left: 56px;
 
 	.nav{
+		margin-top: 65px;
 		width: 280px;
 		.item{
 			display: flex;
 			align-items: center;
-			margin: 10px 16px;
+			padding: 10px 16px;
 			gap: 8px;
+			cursor: pointer;
 		}
 
 		p:hover{
@@ -22,9 +25,18 @@
 	}
 
 	.container{
+		position: fixed;
 		display: flex;
-		padding: 16px;
+		flex-direction: column;
 		margin: 0;
-		gap: 8px;
+		width: 280px;
+		background-color: #ffffff;
+		z-index: 1001;
+
+		.search{
+			display: flex;
+			gap: 8px;
+			padding: 16px;
+		}
 	}
 }

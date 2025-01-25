@@ -1,14 +1,43 @@
 import style from './style.module.scss';
 import Input from "../Input";
 import {titles} from "./mock"
+import {useEffect, useState} from "react";
+import CreateSubtask from "../CreateSubtask";
 
 const CreateTask = () => {
+	const [isOpen, setIsOpen] = useState(false);
+	
+	const openModal = () => {
+		setIsOpen(true);
+		document.body.style.overflow = 'hidden';
+	};
+	const closeModal = () => {
+		setIsOpen(false);
+		document.body.style.overflow = 'unset';
+	};
+	
+	const [isScrolled, setIsScrolled] = useState(false);
+	const handleScroll = () => {
+		if (window.scrollY > 0) {
+			setIsScrolled(true);
+		} else {
+			setIsScrolled(false);
+		}
+	};
+	useEffect(() => {
+		window.addEventListener('scroll', handleScroll);
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
+	
 	return (
 		<div className={style.content}>
-			<div className={style.options}>
+			<div className={`${style.options} ${isScrolled && style.scrolled}`}>
 				<div style={{display: "flex", gap: "16px"}}>
-					<p style={{fontSize: "20px"}}>Подзадача</p>
-					<button>Создать</button>
+					<p className={style.subtask}>Подзадача</p>
+					<button onClick={openModal}>Создать</button>
+					{isOpen && <CreateSubtask onClose={closeModal}/>}
 				</div>
 				<div style={{display: "flex", gap: "4px"}}>
 					<button className={style.save}>Сохранить</button>

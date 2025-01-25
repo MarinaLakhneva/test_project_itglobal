@@ -8,7 +8,7 @@ import Input from "../../../src/components/Input";
 
 const Header = () => {
 	return (
-		<header>
+		<header >
 			<div className={style.header}>
 				<div>
 					<img src={Logo} alt="logo" style={{cursor: "pointer"}}/>

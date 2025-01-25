@@ -10,10 +10,12 @@ const NavBar = () => {
 	return (
 		<div className={style.navbar}>
 			<div className={style.container}>
-				<Input src={Clean} search={false} title="" calendar={false} add={false} necessarily="" placeholder="Поиск по меню"/>
-				<DesignButton src={Fix} alt="fix"/>
+				<div className={style.search}>
+					<Input src={Clean} search={false} title="" calendar={false} add={false} necessarily="" placeholder="Поиск по меню"/>
+					<DesignButton src={Fix} alt="fix"/>
+				</div>
+				<hr/>
 			</div>
-			<hr/>
 			<div className={style.nav}>
 				{mockNav.map((value, index) => (
 					<div className={style.item} key={index}>

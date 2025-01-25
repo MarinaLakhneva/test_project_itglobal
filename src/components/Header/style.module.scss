@@ -1,5 +1,13 @@
 @import '../../index.css';
 
+header{
+	position: sticky;
+	top: 0;
+	background-color: #ffffff;
+	transition: box-shadow 0.2s ease;
+	z-index: 1000;
+}
+
 .header{
 	display: flex;
 	justify-content: space-between;
