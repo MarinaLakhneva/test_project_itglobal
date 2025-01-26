@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/test_project_itglobal/static/css/main.8b185f8b.css",
-    "main.js": "/test_project_itglobal/static/js/main.40e0c46c.js",
+    "main.css": "/test_project_itglobal/static/css/main.fe769d5e.css",
+    "main.js": "/test_project_itglobal/static/js/main.0225fb84.js",
     "static/media/avatar.svg": "/test_project_itglobal/static/media/avatar.a12f813ecf92dd6660907c84db6718eb.svg",
     "static/media/logo.svg": "/test_project_itglobal/static/media/logo.0fd926fd3d4d932c493df4a3262873a6.svg",
     "static/media/settings.svg": "/test_project_itglobal/static/media/settings.ec4cc30ee5db144cf4891a469d409ddd.svg",
@@ -11,15 +11,16 @@
     "static/media/delete.svg": "/test_project_itglobal/static/media/delete.849dc9034b9ccaaaddd1bd4cccd1954a.svg",
     "static/media/search.svg": "/test_project_itglobal/static/media/search.739d884f58ea7ce014e058efb3fc58c8.svg",
     "static/media/clean.svg": "/test_project_itglobal/static/media/clean.69fe8044e5f542b642f85afcbb461597.svg",
+    "static/media/deleteIcon.svg": "/test_project_itglobal/static/media/deleteIcon.849dc9034b9ccaaaddd1bd4cccd1954a.svg",
     "static/media/plus.svg": "/test_project_itglobal/static/media/plus.58fca4d32ef7b4f3f1f6c0bce57802ba.svg",
     "index.html": "/test_project_itglobal/index.html",
     "static/media/icon.svg": "/test_project_itglobal/static/media/icon.746de28c833794cf8f723ed1df54b3ae.svg",
     "static/media/sidebar.svg": "/test_project_itglobal/static/media/sidebar.f4d277fe822ffaffaa00b0d28f8f8761.svg",
-    "main.8b185f8b.css.map": "/test_project_itglobal/static/css/main.8b185f8b.css.map",
-    "main.40e0c46c.js.map": "/test_project_itglobal/static/js/main.40e0c46c.js.map"
+    "main.fe769d5e.css.map": "/test_project_itglobal/static/css/main.fe769d5e.css.map",
+    "main.0225fb84.js.map": "/test_project_itglobal/static/js/main.0225fb84.js.map"
   },
   "entrypoints": [
-    "static/css/main.8b185f8b.css",
-    "static/js/main.40e0c46c.js"
+    "static/css/main.fe769d5e.css",
+    "static/js/main.0225fb84.js"
   ]
 }
