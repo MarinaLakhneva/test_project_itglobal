@@ -1,0 +1,85 @@
+.container{
+	display: flex;
+
+	.necessarily{
+		margin-right: 4px;
+		color: #B21F00;
+	}
+
+	.title{
+		font-weight: 600;
+		font-size: 14px;
+	}
+}
+
+.options{
+	display: flex;
+	align-items: flex-start;
+	gap: 4px;
+
+	.inputContainer{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0;
+		padding: 0;
+		min-height: 30px;
+		width: 100%;
+		border: 1px solid #D5D8DD;
+		border-radius: 4px;
+
+		.inputArr{
+			width: calc(100% - 30px);
+			.arr{
+				display: flex;
+				gap: 4px;
+				margin-left: 4px;
+				box-sizing: border-box;
+				width: 100%;
+				flex-wrap: wrap;
+
+				@media only screen and (max-width: 320px){
+					flex-direction: column;
+					align-items: flex-start;
+				}
+
+				.added{
+					display: flex;
+					align-items: flex-end;
+					padding: 0 8px 2px 8px;
+					border: 1px solid #99D5FF;
+					border-radius: 4px;
+					background-color: #E5F4FF;
+					max-width: 230px; // добавила вот тут еще
+
+					@media only screen and (max-width: 320px){
+						max-width: 158px; // так по макету, но я бы сделала меньше
+					}
+
+					.value{
+						flex: 1;
+						white-space: nowrap;
+						overflow: hidden;
+						text-overflow: ellipsis;
+					}
+
+					.delete{
+						margin-left: 8px;
+						cursor: pointer;
+					}
+				}
+			}
+
+			.input{
+				width: 100%;
+				margin: 6px 4px 6px 8px;
+				padding: 0;
+			}
+		}
+
+		.svg{
+			margin: 0 8px ;
+			cursor: pointer;
+		}
+	}
+}

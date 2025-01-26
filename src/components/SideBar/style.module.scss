@@ -1,0 +1,21 @@
+.sidebar{
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 56px;
+	height: 100%;
+	left: 0;
+	background-color: #ffffff;
+	z-index: 1000;
+	border-right: 1px solid #D5D8DD;
+
+	@media only screen and (max-width: 765px){
+		display: none;
+	}
+
+	.svg{
+		padding: 16px;
+		cursor: pointer;
+	}
+}

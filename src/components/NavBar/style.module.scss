@@ -1,0 +1,47 @@
+@import '../../index.css';
+
+.navbar{
+	width: 280px;
+	height: 100vh;
+	border: 1px solid #D5D8DD;
+	border-top: none;
+	border-bottom: none;
+	margin-left: 56px;
+
+	@media only screen and (max-width: 991px){
+		display: none;
+	}
+
+	.container{
+		position: fixed;
+		display: flex;
+		flex-direction: column;
+		margin: 0;
+		width: 280px;
+		background-color: #ffffff;
+		z-index: 1000;
+
+		.search{
+			display: flex;
+			gap: 8px;
+			padding: 16px;
+		}
+	}
+
+	.nav{
+		margin-top: 65px;
+		width: 280px;
+
+		.item{
+			display: flex;
+			align-items: center;
+			padding: 10px 16px;
+			gap: 8px;
+			cursor: pointer;
+		}
+
+		p:hover{
+			color: #D5D8DD;
+		};
+	}
+}
