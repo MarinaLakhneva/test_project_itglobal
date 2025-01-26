@@ -25,7 +25,7 @@
 		padding: 0;
 		min-height: 30px;
 		width: 100%;
-		border: 1px solid #ABB1BA;
+		border: 1px solid #D5D8DD;
 		border-radius: 4px;
 
 		.input{
@@ -41,6 +41,11 @@
 			box-sizing: border-box;
 			width: 100%;
 			flex-wrap: wrap;
+
+			@media only screen and (max-width: 320px){
+				flex-direction: column;
+				align-items: flex-start;
+			}
 		}
 
 		.added{
@@ -50,6 +55,17 @@
 			border: 1px solid #99D5FF;
 			border-radius: 4px;
 			background-color: #E5F4FF;
+
+			@media only screen and (max-width: 320px){
+				max-width: 158px;
+			}
+
+			.value{
+				flex: 1;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
 
 			.delete{
 				margin-left: 8px;

@@ -34,14 +34,14 @@ const CreateTask = () => {
 	return (
 		<div className={style.content}>
 			<div className={`${style.options} ${isScrolled && style.scrolled}`}>
-				<div style={{display: "flex", gap: "16px"}}>
+				<div className={style.left}>
 					<p className={style.subtask}>Подзадача</p>
 					<button onClick={openModal}>Создать</button>
 					{isOpen && <CreateSubtask onClose={closeModal}/>}
 				</div>
-				<div style={{display: "flex", gap: "4px"}}>
+				<div className={style.right}>
 					<button className={style.save}>Сохранить</button>
-					<button>Сохранить и выйти</button>
+					<button className={style.logout}>Сохранить и выйти</button>
 				</div>
 			</div>
 			<div className={style.task}>

@@ -46,7 +46,7 @@ const Input = ({title, necessarily, search, add, calendar, src, placeholder}) =>
 							<div className={style.arr} style={{marginTop: title === 'Согласующие' ? "4px" : "", marginBottom: title === 'Согласующие' ? "4px" : ""}}>
 								{arr.map((value, index) =>
 									<div key={index} className={style.added}>
-										<p>{value}</p>
+										<p className={style.value}>{value}</p>
 										{
 											!(arrDisabled.includes(title) && arr.length === 1) &&
 											<img src={Delete} alt="delete" className={style.delete} onClick={() => handleDeleteClick(index)}/>
@@ -57,7 +57,7 @@ const Input = ({title, necessarily, search, add, calendar, src, placeholder}) =>
 						}
 						<input
 							className={style.input}
-							style={{display: (arrDisabled.includes(title) && arr.length !== 0) ? "none" : "", width: title === 'Согласующие' ? "150px" : ""}}
+							style={{display: (arrDisabled.includes(title) && arr.length !== 0) ? "none" : ""}}
 							value={calendar ? inputDate : inputText}
 							onChange={(e) => {
 								calendar ? setInputDate(e.target.value) : setInputText(e.target.value)

@@ -2,6 +2,8 @@ import style from './style.module.scss';
 import Input from "../Input";
 import {titles} from "./mock"
 import {useEffect, useRef} from "react";
+import DesignButton from "../DesignButton";
+import Delete from "./deleteIcon.svg";
 
 const CreateSubtask = ({onClose}) => {
 	const modalRef = useRef(null);
@@ -17,16 +19,29 @@ const CreateSubtask = ({onClose}) => {
 			document.removeEventListener('mousedown', handleClickOutside);
 		};
 	}, []);
+	
+	const buttons = () => {
+		return(
+			<>
+					<button className={style.save}>Сохранить</button>
+					<button className={style.close} onClick={onClose}>Отменить</button>
+			</>
+		)
+	}
 	return (
 		<div className={style.module}>
 			<div className={style.content} ref={modalRef}>
 				<div className={style.options}>
-					<div style={{display: "flex", gap: "16px"}}>
+					<div className={style.left}>
 						<p className={style.subtask}>Подзадача</p>
 					</div>
-					<div style={{display: "flex", gap: "4px"}}>
-						<button className={style.save}>Сохранить</button>
-						<button onClick={onClose}>Отменить</button>
+					<div className={style.right}>
+						<div className={style.buttons}>
+							{buttons()}
+						</div>
+						<div className={style.closeicon} onClick={onClose}>
+							<DesignButton src={Delete} alt="delete"/>
+						</div>
 					</div>
 				</div>
 				<div className={style.task}>
@@ -48,6 +63,9 @@ const CreateSubtask = ({onClose}) => {
 							))
 						}
 					</div>
+				</div>
+				<div className={style.buttonsbottom}>
+					{buttons()}
 				</div>
 			</div>
 		</div>

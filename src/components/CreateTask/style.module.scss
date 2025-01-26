@@ -15,22 +15,62 @@
 		width: calc(100% - 370px);
 		left: 338px;
 
+		@media only screen and (max-width: 991px){
+			width: calc(100% - 89px);
+			left: 57px;
+		}
+
+		@media only screen and (max-width: 765px){
+			width: calc(100% - 32px);
+			left: 0;
+		}
+
+		.left{
+			display: flex;
+			gap: 16px;
+
+			@media only screen and (max-width: 765px){
+				justify-content: space-between;
+				align-items: center;
+				width: 100%;
+				gap: 0;
+			}
+		}
+
+		.right{
+			display: flex;
+			gap: 4px;
+		}
+
 		.subtask{
 			font-family: "Montserrat", serif;
 			font-optical-sizing: auto;
 			font-weight: 400;
 			font-size: 20px;
 			font-style: normal;
+
+			@media only screen and (max-width: 765px){
+				font-size: 14px;
+			}
 		}
 
 		.save{
 			color: #ffffff;
 			background-color: #0078CF;
+			@media only screen and (max-width: 765px){
+				display: none;
+			}
 		}
 
 		.save:hover{
 			color:  #0078CF;
 			background-color: #ffffff;
+		}
+
+		.logout{
+			@media only screen and (max-width: 765px){
+				display: none;
+			}
 		}
 	}
 
@@ -44,6 +84,14 @@
 		margin-top: 64px;
 		padding: 0 16px 16px 16px;
 
+		@media only screen and (max-width: 991px){
+			padding: 0 16px 16px 72px;
+		}
+
+		@media only screen and (max-width: 765px){
+			padding: 0 16px 16px 16px;
+		}
+
 		.title{
 			font-weight: 600;
 			font-size: 24px;
@@ -55,6 +103,10 @@
 			font-family: "Montserrat", serif;
 			font-optical-sizing: auto;
 			font-style: normal;
+
+			@media only screen and (max-width: 765px){
+				font-size: 20px;
+			}
 		}
 
 		.information{
@@ -66,12 +118,20 @@
 
 		.information > :nth-child(-n+8) {
 			grid-column: span 1;
+
+			@media only screen and (max-width: 991px){
+				grid-column: span 2;
+			}
 		}
 		.information > :nth-child(n+9) {
 			grid-column: span 2;
 		}
 		.information > :nth-child(n+11) {
 			grid-column: span 1;
+
+			@media only screen and (max-width: 991px){
+				grid-column: span 2;
+			}
 		}
 	}
 }
