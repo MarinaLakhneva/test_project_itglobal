@@ -1,9 +1,9 @@
 import style from './style.module.scss';
-import Input from "../Input";
-import {titles} from "./mock"
 import {useEffect, useRef} from "react";
-import DesignButton from "../DesignButton";
 import Delete from "./deleteIcon.svg";
+import {titles} from "./mock"
+import Input from "../Input";
+import DesignButton from "../DesignButton";
 
 const CreateSubtask = ({onClose}) => {
 	const modalRef = useRef(null);
@@ -24,10 +24,11 @@ const CreateSubtask = ({onClose}) => {
 		return(
 			<>
 					<button className={style.save}>Сохранить</button>
-					<button className={style.close} onClick={onClose}>Отменить</button>
+					<button onClick={onClose}>Отменить</button>
 			</>
 		)
 	}
+	
 	return (
 		<div className={style.module}>
 			<div className={style.content} ref={modalRef}>
@@ -39,7 +40,7 @@ const CreateSubtask = ({onClose}) => {
 						<div className={style.buttons}>
 							{buttons()}
 						</div>
-						<div className={style.closeicon} onClick={onClose}>
+						<div className={style.close} onClick={onClose}>
 							<DesignButton src={Delete} alt="delete"/>
 						</div>
 					</div>
@@ -64,7 +65,7 @@ const CreateSubtask = ({onClose}) => {
 						}
 					</div>
 				</div>
-				<div className={style.buttonsbottom}>
+				<div className={style.bottom}>
 					{buttons()}
 				</div>
 			</div>

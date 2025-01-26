@@ -1,8 +1,8 @@
 import style from './style.module.scss';
 
-const DesignButton = ({src, alt}) => {
+const DesignButton = ({src, alt, disabled}) => {
 	return (
-		<img className={style.button} src={src} alt={alt}/>
+		<img className={`${style.button} ${disabled && style.btn}`} src={src} alt={alt}/>
 	);
 };
 

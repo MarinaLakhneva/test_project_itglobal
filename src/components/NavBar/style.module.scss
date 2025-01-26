@@ -12,9 +12,26 @@
 		display: none;
 	}
 
+	.container{
+		position: fixed;
+		display: flex;
+		flex-direction: column;
+		margin: 0;
+		width: 280px;
+		background-color: #ffffff;
+		z-index: 1000;
+
+		.search{
+			display: flex;
+			gap: 8px;
+			padding: 16px;
+		}
+	}
+
 	.nav{
 		margin-top: 65px;
 		width: 280px;
+
 		.item{
 			display: flex;
 			align-items: center;
@@ -27,22 +44,4 @@
 			color: #D5D8DD;
 		};
 	}
-
-	.container{
-		position: fixed;
-		display: flex;
-		flex-direction: column;
-		margin: 0;
-		width: 280px;
-		background-color: #ffffff;
-		z-index: 1001;
-
-		.search{
-			display: flex;
-			gap: 8px;
-			padding: 16px;
-		}
-	}
 }
-
-

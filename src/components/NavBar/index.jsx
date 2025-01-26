@@ -3,8 +3,8 @@ import Clean from "./clean.svg";
 import Fix from "./fix.svg";
 import Icon from "./icon.svg";
 import {mockNav} from "./mock"
-import DesignButton from "../../../src/components/DesignButton";
-import Input from "../../../src/components/Input";
+import DesignButton from "../DesignButton";
+import Input from "../Input";
 
 const NavBar = () => {
 	return (

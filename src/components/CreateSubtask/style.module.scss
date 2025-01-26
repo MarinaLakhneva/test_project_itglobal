@@ -12,14 +12,14 @@
 	position: fixed;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	top: 0;
 	left: 0;
 	right: 0;
-	background-color: rgba(11, 12, 14, 0.4);
-	align-items: center;
-	z-index: 1;
-	height: 100%;
 	padding: 20px 16px 0 16px;
+	height: 100%;
+	background-color: rgba(11, 12, 14, 0.4);
+	z-index: 1000;
 
 	@media only screen and (max-width: 320px){
 		padding: 0;
@@ -28,7 +28,7 @@
 	}
 
 	.content{
-		padding: 28px 16px;
+		padding: 28px 16px 38px 16px;
 		box-sizing: border-box;
 		border-radius: 4px;
 		max-width: 800px;
@@ -47,76 +47,75 @@
 			.left{
 				display: flex;
 				gap: 16px;
+
+				.subtask{
+					font-family: "Montserrat", serif;
+					font-optical-sizing: auto;
+					font-weight: 400;
+					font-size: 20px;
+					font-style: normal;
+				}
 			}
 
 			.right{
 				display: flex;
 				gap: 4px;
-			}
 
-			.subtask{
-				font-family: "Montserrat", serif;
-				font-optical-sizing: auto;
-				font-weight: 400;
-				font-size: 20px;
-				font-style: normal;
-			}
-
-			.buttons{
-				display: flex;
-				gap: 4px;
-
-				@media only screen and (max-width: 420px){
-					display: none;
-				}
-			}
-
-			.closeicon{
-				display: none;
-				@media only screen and (max-width: 420px){
+				.buttons{
 					display: flex;
+					gap: 4px;
+
+					@media only screen and (max-width: 420px){
+						display: none;
+					}
+				}
+
+				.close{
+					display: none;
+					@media only screen and (max-width: 420px){
+						display: flex;
+					}
 				}
 			}
+		}
 
+		.task{
+			display: flex;
+			flex-direction: column;
+			margin-top: 16px;
+
+			.title{
+				font-weight: 600;
+				font-size: 24px;
+				line-height: 32px;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				max-width: 100%;
+			}
+
+			.information{
+				margin-top: 16px;
+				display: grid;
+				grid-template-columns: repeat(1, 1fr);
+				gap: 16px;
+			}
+		}
+
+		.bottom{
+			display: none;
+
+			@media only screen and (max-width: 420px){
+				display: flex;
+				flex-direction: column;
+				margin-top: 16px;
+				gap: 16px;
+				width: 100%;
+			}
 		}
 	}
 
 	.content::-webkit-scrollbar {
 		display: none;
-	}
-
-	.task{
-		display: flex;
-		flex-direction: column;
-		margin-top: 16px;
-
-		.title{
-			font-weight: 600;
-			font-size: 24px;
-			line-height: 32px;
-			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;
-			max-width: 100%;
-		}
-
-		.information{
-			margin-top: 16px;
-			display: grid;
-			grid-template-columns: repeat(1, 1fr);
-			gap: 16px;
-		}
-	}
-
-	.buttonsbottom{
-		display: none;
-
-		@media only screen and (max-width: 420px){
-			display: flex;
-			flex-direction: column;
-			margin-top: 16px;
-			gap: 16px;
-			width: 100%;
-		}
 	}
 }

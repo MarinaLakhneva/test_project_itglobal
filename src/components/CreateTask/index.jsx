@@ -1,7 +1,7 @@
 import style from './style.module.scss';
-import Input from "../Input";
-import {titles} from "./mock"
 import {useEffect, useState} from "react";
+import {titles} from "./mock"
+import Input from "../Input";
 import CreateSubtask from "../CreateSubtask";
 
 const CreateTask = () => {
@@ -11,6 +11,7 @@ const CreateTask = () => {
 		setIsOpen(true);
 		document.body.style.overflow = 'hidden';
 	};
+	
 	const closeModal = () => {
 		setIsOpen(false);
 		document.body.style.overflow = 'unset';

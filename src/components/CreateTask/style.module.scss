@@ -5,15 +5,19 @@
 	width: 100%;
 	overflow: hidden;
 
+	.scrolled {
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	}
+
 	.options{
 		position: fixed;
 		display: flex;
 		justify-content: space-between;
 		padding: 16px;
-		background-color: #ffffff;
-		z-index: 1001;
-		width: calc(100% - 370px);
 		left: 338px;
+		width: calc(100% - 370px);
+		background-color: #ffffff;
+		z-index: 1000;
 
 		@media only screen and (max-width: 991px){
 			width: calc(100% - 89px);
@@ -35,47 +39,43 @@
 				width: 100%;
 				gap: 0;
 			}
+
+			.subtask{
+				font-family: "Montserrat", serif;
+				font-optical-sizing: auto;
+				font-weight: 400;
+				font-size: 20px;
+				font-style: normal;
+
+				@media only screen and (max-width: 765px){
+					font-size: 14px;
+				}
+			}
 		}
 
 		.right{
 			display: flex;
 			gap: 4px;
-		}
 
-		.subtask{
-			font-family: "Montserrat", serif;
-			font-optical-sizing: auto;
-			font-weight: 400;
-			font-size: 20px;
-			font-style: normal;
+			.save{
+				color: #ffffff;
+				background-color: #0078CF;
+				@media only screen and (max-width: 765px){
+					display: none;
+				}
+			}
 
-			@media only screen and (max-width: 765px){
-				font-size: 14px;
+			.save:hover{
+				color:  #0078CF;
+				background-color: #ffffff;
+			}
+
+			.logout{
+				@media only screen and (max-width: 765px){
+					display: none;
+				}
 			}
 		}
-
-		.save{
-			color: #ffffff;
-			background-color: #0078CF;
-			@media only screen and (max-width: 765px){
-				display: none;
-			}
-		}
-
-		.save:hover{
-			color:  #0078CF;
-			background-color: #ffffff;
-		}
-
-		.logout{
-			@media only screen and (max-width: 765px){
-				display: none;
-			}
-		}
-	}
-
-	.scrolled {
-		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 	}
 
 	.task{

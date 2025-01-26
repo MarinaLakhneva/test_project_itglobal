@@ -3,17 +3,17 @@ import Logo from './logo.svg';
 import Avatar from './avatar.svg';
 import Settings from './settings.svg';
 import Search from './search.svg';
-import Sidebar from './sidebar.svg';
-import DesignButton from "../../../src/components/DesignButton";
-import Input from "../../../src/components/Input";
+import DesignButton from "../DesignButton";
+import Input from "../Input";
+import SidebarImg from "../SidebarImg";
 
 const Header = () => {
 	return (
-		<header >
+		<header>
 			<div className={style.header}>
 				<div className={style.logo}>
 					<img className={style.logotype} src={Logo} alt="logo"/>
-					<img className={style.sidebar} src={Sidebar} alt="sidebar"/>
+					<div className={style.sidebar}><SidebarImg width={20} height={20} fill="#2E3238"/></div>
 				</div>
 				<div className={style.nav}>
 					<div className={style.search}>
